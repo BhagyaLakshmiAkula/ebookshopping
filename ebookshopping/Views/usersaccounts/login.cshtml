@@ -1,0 +1,44 @@
+﻿<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  
+</head>
+
+
+<body class="hold-transition login-page">
+     </body>
+     <style>
+.login-page{
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlh4alQlmOM8J8qsrz4B5m4aDPIJ_y0Tlxlw&usqp=CAU");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+     </style>
+
+
+@{
+    Layout = null;
+}
+<h2>login</h2>
+<form asp-action="Login">
+    <div class="form-group">
+        <label  for="na" class="control-label"> user Name</label>
+        <input name="na" class="form-control" />
+        <span validation-for="na" class="text-danger"><</span>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="pa" class="control-label"> user Password</label>
+        <input name="pa" type="password" class="form-control" />
+        <span validation-for="pa" class="text-danger"></span>
+    </div><br>
+    <input type="submit" value="Login" class="btn btn-primary" />
+    
+    <p style="color:red"> @ViewData["message"]</p>
+</form>
+ <a asp-action="Create" >Create Account</a>
+
+
+
